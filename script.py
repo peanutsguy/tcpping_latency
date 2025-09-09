@@ -89,6 +89,7 @@ if __name__ == "__main__":
     start_timestamp = int(time.time())
     destination_ip = get_destination_ip(TCP_ENDPOINT)
     results, avg_latency = run_tcpping(destination_ip, TCP_PORT, NUM_REQUESTS)
+    os.makedirs("results", exist_ok=True)
     filename = f"results/tcpping_results_{start_timestamp}.csv"
     save_results(results, avg_latency, start_timestamp, filename, destination_ip)
     print(f"Results saved to {filename}")
