@@ -20,7 +20,7 @@ def run_tcpping(ip, port, count):
     results = []
     latencies = []
     for i in range(count):
-        print(i)
+        # print(i)
         start = time.time()
         try:
             proc = subprocess.run(
